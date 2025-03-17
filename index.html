@@ -1,19 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QXMLZQKTD"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-9QXMLZQKTD');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Broke No More (BNM)</title>
     <style>
+		.carousel {
+    max-height: 400px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #fff; /* Optional: Background color for smaller images */
+}
+
+.carousel-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px; /* Same as max-height of carousel */
+}
+
+.carousel-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures full image is visible */
+}
+
+/* Animation for Auto-Sliding */
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+}
+		.bnm-logo {
+    display: block;
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    margin: 20px auto;
+    filter: drop-shadow(0px 0px 10px green); /* Green LED glow */
+}
+
+.bnm-logo-container {
+    background-color: #222; /* Dull background */
+    padding: 20px;
+    text-align: center;
+}
+	
+		/* General Button Styles */
+.bnm-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid #1DB954; /* BNM Green */
+    color: #fff;
+    background: #1DB954; /* BNM Green */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.bnm-button:hover {
+    background: #148C40; /* Darker Green */
+    border-color: #148C40;
+    transform: scale(1.05);
+}
+
+/* Active/Clicked Effect */
+.bnm-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Disabled State */
+.bnm-button:disabled {
+    background: #ccc;
+    border-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Outline Button (Alternative Style) */
+.bnm-button-outline {
+    background: transparent;
+    color: #1DB954;
+    border: 2px solid #1DB954;
+}
+
+.bnm-button-outline:hover {
+    background: #1DB954;
+    color: white;
+}
+
+/* Large and Small Buttons */
+.bnm-button.large {
+    padding: 16px 32px;
+    font-size: 18px;
+}
+
+.bnm-button.small {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
         body { font-family: Arial, sans-serif; background-color: #f3f4f6; color: #333; margin: 0; padding: 0; }
         header { background-color: #1e3a8a; color: white; text-align: center; padding: 20px; font-size: 24px; font-weight: bold; }
         .container { max-width: 800px; margin: 20px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
@@ -25,13 +123,25 @@
 </head>
 <body>
     <header>Broke No More (BNM) - Your Path to Financial Freedom</header>
+	<div class="bnm-logo-container">
+    <img src="bnmlogo.JPG" alt="BNM Logo" class="bnm-logo">
+</div>
     
     <div class="container">
         <h2>About Us</h2>
         <p>BNM is a youth investment group that empowers individuals through smart investments. Membership is based on financial contributions, with shares proportional to investments.</p>
-    </div>
 
+	</div>
+	
+	<div class="carousel">
+    <div class="carousel-images">
+        <img src="bnmlogo.jpg" class="carousel-img">
+        <img src="bnmlogo3.JPG" class="carousel-img">
+        <img src="bnmlogo2.webp" class="carousel-img">
+    </div>
+</div>
     <div class="container">
+	
         <h2>How It Works</h2>
         <ul>
             <li>Contribute funds and become a shareholder.</li>
@@ -39,6 +149,16 @@
             <li>Profits are shared based on contribution percentages.</li>
             <li>Members have a say in investment decisions.</li>
         </ul>
+    </div>
+	
+	<div class="container">
+        <h2>Important links</h2>
+        
+
+
+<button class="bnm-button small">Monse Resellers</button></p>
+<button class="bnm-button small">Tivex Travel & Tours</button></p>
+<button class="bnm-button-outline">Learn More</button>
     </div>
 
     <div class="container">
@@ -48,7 +168,7 @@
 
     <div class="container">
         <h2>Testimonials</h2>
-        <p><em>"Broke No More (BNM) has been a game-changer! As the founder and first member, I’ve witnessed firsthand how powerful collective investing can be. This community is more than just an investment group—it’s a movement toward financial freedom. Every contribution counts, and every member has a stake in shaping our future. If you’re ready to take control of your financial journey, BNM is the place to be!" - Monse, CEO</em></p>
+        <p><em>"Broke No More (BNM) has been a game-changer! As the founder and first member, I’ve witnessed firsthand how powerful collective investing can be. This community is more than just an investment group—it’s a movement toward financial freedom. Every contribution counts, and every member has a stake in shaping our future. If you’re ready to take control of your financial journey, BNM is the place to be!" - <b>Monse, CEO<b></em></p>
     </div>
 
     <div class="container">
